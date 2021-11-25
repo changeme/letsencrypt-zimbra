@@ -8,7 +8,7 @@ renewal of the certificate.
 
 Start with *Setup manual* below and help message of the script
     ```
-    letsencrypt-zimbra.sh -h`
+    obtain-and-deploy-letsencrypt-cert.sh -h`
     ```
 
 Enjoy **open-source** and **encryption**!
@@ -97,7 +97,7 @@ See the *help* message of the script (`-h`), example config file
 5. Run the script to obtain certificate
 
     ```
-    sudo -Hiu zimbra /opt/letsencrypt-zimbra/letsencrypt-zimbra.sh -v
+    sudo -Hiu zimbra /opt/letsencrypt-zimbra/obtain-and-deploy-letsencrypt-cert.sh -v
     ```
 
     - *Note*: add the `-t ` option to run a test (see below)
@@ -106,10 +106,10 @@ See the *help* message of the script (`-h`), example config file
 6. Configure the cron job
 
     ```
-    cp configs/cron.conf /etc/cron.d/letsencrypt-zimbra
+    cp configs/cron.conf /etc/cron.d/obtain-and-deploy-letsencrypt-cert.sh
     ```
 
-    - Review the `/etc/cron.d/letsencrypt-zimbra` if it meets your system
+    - Review the `/etc/cron.d/obtain-and-deploy-letsencrypt-cert.sh` if it meets your system
       requirements
 
 
@@ -124,7 +124,7 @@ certificate:
 2. Run the script interactively with an extra `-f` (*force renew*) option:
 
     ```
-    sudo -Hiu zimbra /opt/letsencrypt-zimbra/letsencrypt-zimbra.sh -vf
+    sudo -Hiu zimbra /opt/letsencrypt-zimbra/obtain-and-deploy-letsencrypt-cert.sh -vf
     ```
 
     - *Warning*: keep in mind Let's Encrypt *rate limits* (see below) when
